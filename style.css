@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.app {
+    width: 800px;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+@media (max-width: 500px) {
+    .app {
+        width: 100%;
+    }
+}
+
+/* ---header---- */
+
+.header {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    border-bottom: 5px solid red;
+    border-bottom-left-radius: 1%;
+    border-bottom-right-radius: 1%;
+    background-color: rgb(220, 220, 220);
+    text-transform: uppercase;
+
+}
+
+.header .header__title {
+    position: absolute;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    text-align: center;
+    border-radius: 5%;
+    border-bottom: yellow solid 5px;
+
+}
+
+.header .header__title h1 {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.header .header__title span {
+    font-size: 16px;
+    color: yellow;
+
+}
+
+@media (max-width: 600px) {
+
+    .header .header__title h1 {
+        font-size: 30px;
+        padding: 0 30px;
+
+    }
+
+    .header .header__title span {
+        font-size: 14px;
+
+    }
+}
+
+/* --- categories --- */
+
+.categories {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 70%;
+    width: 100%;
+    background-image: url(./images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.categories .categories__button {
+    flex-basis: 25%;
+    margin: 2px;
+    padding: 1px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    background-color: yellow;
+    color: red;
+    top: -5px;
+    left: 0;
+
+}
+
+.categories .categories__button img {
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    border: chartreuse solid 5px;
+    opacity: 0.9;
+    transition: 0.3s linear transform;
+
+}
+
+.categories .categories__button img:hover {
+    transform: scale(1.05);
+
+}
+
+.categories .categories__button:hover {
+    background-color: chartreuse;
+
+}
+
+.category__title {
+    color: yellow;
+    font-size: 26px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    border: 2px solid red;
+}
+
+@media (max-width: 700px) {
+    .categories {
+        width: 100%;
+    }
+
+    .categories .categories__button {
+        flex-basis: 45%;
+
+    }
+
+    .categories .categories__button img:hover {
+        transform: scale(1.05);
+
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: red;
+    text-align: center;
+    color: white;
+    border-bottom: yellow solid 5px;
+
+}
+
+@media (max-width: 800px) {
+    footer {
+        position: relative;
+        top: 220px;
+    }
+}
+
+/* --- new window form  */
+.modal-wrap {
+    display: none;
+}
+
+.modal-wrap.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.modal-wrap.active .modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 600px;
+    height: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+
+}
+
+.modal .top {
+
+    background: red;
+    flex-basis: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .top h2 {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+
+}
+
+.modal .middle {
+    flex-grow: 1;
+    background: whitesmoke;
+    position: relative;
+}
+
+.modal .bottom {
+    flex-basis: 15%;
+    background: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* mobile*/
+@media (max-width: 800px) {
+    .modal-wrap.active .modal {
+        width: 90%;
+        height: 94vh;
+
+    }
+}
+
+.modal-wrap .modal span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: arial;
+    font-size: 20px;
+    background: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 1%;
+    transform: translate(50%, -50);
+    cursor: pointer;
+}
+
+.button__check,
+.button__next,
+.button__showWrong {
+    background-color: red;
+    text-align: center;
+    color: white;
+    width: 150px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+
+
+}
+
+.button__check:hover,
+.button__next:hover,
+.button__showWrong:hover {
+    background-color: yellow;
+    color: red;
+}
+
+.modal .middle label {
+
+    display: inline;
+    text-align: center;
+    top: 5%;
+    right: 50%;
+    width: 100%;
+
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.middle input {
+
+    text-align: center;
+    font-size: 16px;
+    width: 250px;
+    height: 40px;
+    color: red;
+    font-weight: 900;
+}
+
+.modal .middle .answer {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+.correct {
+    color: darkgreen;
+    font-size: 30px;
+}
+
+.wrong {
+    color: red;
+    font-size: 40px;
+}
+
+/* result div */
+
+.middle__result {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: black;
+    justify-content: space-around;
+
+}
+
+.middle__result .counterCorrectAnswer {
+    color: blue;
+}
+
+.middle__result__Correct {
+    background-color: yellowgreen;
+    color: yellow;
+}
+
+.button__check:disabled,
+.button__next:disabled,
+.button__showWrong:disabled {
+    background: yellow;
+    color: red;
+    cursor: no-drop;
+
+}
+
+
+@media (max-width: 600px) {
+    .modal-wrap.active {
+        width: 100%;
+
+    }
+
+    .modal .bottom {
+        flex-direction: column;
+    }
+
+    .button__check,
+    .button__next,
+    .button__showWrong {
+        width: 100%;
+        border: none;
+        margin-bottom: 1px;
+    }
+
+}
+
+table {
+    text-transform: uppercase;
+    width: 100%;
+    height: 150px;
+    box-sizing: content-box;
+    margin: auto;
+
+
+}
+
+
+table tr {
+    cursor: pointer;
+    width: 80%;
+    display: flex;
+
+}
+
+table th {
+
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 24px;
+    width: 100%;
+
+
+}
+
+table tbody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+table td {
+    background-color: #e0e0e0;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--backGroundColor1);
+    text-align: center;
+    line-height: 34px;
+    overflow: hidden;
+    flex-basis: 50%;
+
+}
+
+table tbody {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

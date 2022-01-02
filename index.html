@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nauka Słownictwa Hiszpańskiego</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="app">
+        <section class="header">
+            <div class="header__title">
+                <h1>Nauka Słownictwa</h1>
+                <span>Język Hiszpański</span>
+            </div>
+        </section>
+
+        <section class="categories">
+
+            <button id="0" data-category class="categories__button">
+                <img src="./images/category_eat.png" alt="" class="src">jedzenie
+            </button>
+
+            <button id="1" data-category class="categories__button">
+                <img src="./images/category_travel.png" alt="" class="src">podróże
+            </button>
+
+            <button id="2" data-category class="categories__button">
+                <img src="./images/category_humanity.png" alt="" class="src">społeczeństwo</button>
+            <button id="3" data-category class="categories__button">
+                <img src="./images/category_culture.png" alt="" class="src">kultura
+            </button>
+            <button id="4" data-category class="categories__button">
+                <img src="./images/category_relationship.jpg" alt="" class="src">relacje
+            </button>
+            <button id="5" data-category class="categories__button">
+                <img src="./images/category_medical.jpg" alt="" class="src">zdrowie
+            </button>
+            <button id="6" data-category class="categories__button">
+                <img src="./images/category_school.jpg" alt="" class="src">szkoła
+            </button>
+            <button id="7" data-category class="categories__button">
+                <img src="./images/category_sport.jpg" alt="" class="src">sport
+            </button> <button id="8" data-category class="categories__button">
+                <img src="./images/category_job.jpg" alt="" class="src">praca
+            </button>
+        </section>
+
+        <footer>
+            Twórczość 2021r by KD
+        </footer>
+    </div>
+
+    <!-- niewidoczny formularz / form hidden -->
+
+    <section class="modal-wrap">
+        <div class="modal">
+            <div class="top">
+                <h2 id="word">Słownictwo</h2>
+            </div>
+            <div class="middle">
+
+                <label>Wpisz słowo po hiszpańsku</label>
+                <input type="text"></input>
+                <p id="answer"></p>
+                <h4></h4>
+                <table id="table">
+
+                </table>
+
+
+                <div class="middle__result">
+                    <label id="counterCorrectAnswer" class="counterCorrectAnswer">poprawne: 0
+                    </label>
+                    <label id="counterWrongAnswer" class="counterWrongAnswer">błędne: 0
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="bottom">
+                <button class="button__check" id="button__check" value="">Sprawdź</button>
+                <button class="button__next" id="button__next">Next</button>
+                <button class="button__showWrong" id="button__showWrong">Pokaż błędne</button>
+
+            </div>
+            <span id="hide" class="hide">X</span>
+
+
+        </div>
+    </section>
+
+    <script src="scripts/main.js" type="module"></script>
+
+</body>
+
+</html>
