@@ -19,6 +19,12 @@ let wrongAnswerQuestion = [];
 let wrongAnswerQuestionPL = [];
 const btnShowWrong = document.getElementById('button__showWrong');
 
+btnCategories.forEach((item) =>
+  item.addEventListener("click", () => {
+    choiceCategory(item.id);
+  })
+);
+
 const resetAllProperty = () => {
     counter = 0;
     counterWrong = 0;
@@ -139,8 +145,8 @@ const startCategory = (id, wordESP, wordPL) => {
 const choiceCategory = (e) => {
 
     counter = 0;
-    const categoryID = e.path[1].id;
-    const buttonID = e.path[1].id;
+    const categoryID = e;
+    const buttonID = e;
     const arrayWordsCategoryOfESP = categories[categoryID].questionES;
     const arrayWordsCategoryOfPL = categories[categoryID].questionPl;
 
